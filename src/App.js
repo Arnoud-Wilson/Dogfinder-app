@@ -12,12 +12,14 @@ function App() {
   return (
       <>
           <Navigation />
-          <Home />
-          <SignUp />
-          <Login />
-          <AllDogs />
-          <Search />
-          <SingleDog />
+          <switch>
+            <Home />
+            <SignUp />
+            <Login />
+            <AllDogs />
+            <Search />
+            <SingleDog />
+          </switch>
       </>
   );
 }

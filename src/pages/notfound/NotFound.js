@@ -1,6 +1,6 @@
 import React from "react";
-import "./alldogs.css";
-function AllDogs() {
+
+function NotFound() {
 
     return (
         <>
@@ -8,4 +8,4 @@ function AllDogs() {
     );
 }
 
-export default AllDogs;
+export default NotFound;

@@ -20,7 +20,7 @@ function App() {
                 <Route path="/login" element={ <Login /> } />
                 <Route path="/alldogs" element={ <AllDogs /> } />
                 <Route path="/search" element={ <Search /> } />
-                <Route path="/singledog/:ras" element={ <SingleDog /> } />
+                <Route path="/singledog/:id" element={ <SingleDog /> } />
                 <Route path="*" element={ <NotFound /> } />
           </Routes>
       </>

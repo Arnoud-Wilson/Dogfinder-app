@@ -1,11 +1,12 @@
 import React, {useContext} from "react";
 import { slide as Menu } from "react-burger-menu";
 import "./navigation.css";
-import {NavLink } from "react-router-dom";
+import {NavLink, useNavigate } from "react-router-dom";
 import {AuthContext} from "../../context/CustomContextProvider";
 
 function Navigation() {
-    const {isAuth, loginFunction, logoutFunction} = useContext(AuthContext);
+    const {isAuth, logoutFunction, username} = useContext(AuthContext);
+    const navigate = useNavigate();
 
     return (
         <nav className="navbar">
@@ -20,10 +21,10 @@ function Navigation() {
             </Menu>
             <p>Dog finder</p>
             {isAuth === false ?
-                <button className="navbar-button" onClick={loginFunction}>Inloggen</button>
+                <button className="navbar-button" onClick={()=> navigate("/login")}>Inloggen</button>
                 :
                 <>
-                {/*<p>Arnoud Wilson</p>*/}
+                <p className="username">{username}</p>
                 <button className="navbar-button" onClick={logoutFunction}>Uitloggen</button>
                 </>
             }

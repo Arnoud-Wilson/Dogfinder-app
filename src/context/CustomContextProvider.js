@@ -24,18 +24,17 @@ function CustomContextProvider({children}) {
             const decoded = jwt_decode(localToken)
 
             try {
-                const userResult = await axios.get(`https://frontend-educational-backend.herokuapp.com/api/user${decoded.sub}`, { headers: {
+                const userResult = await axios.get("https://frontend-educational-backend.herokuapp.com/api/user", { headers: {
                         "Content-Type": "application/json",
                         "Authorization": `Bearer ${localToken}`,
                     }})
-                console.log(userResult.data)
                 setIsAuthenticated({
                     isAuth: true,
                     username: `${userResult.data.username}`,
                     email: `${userResult.data.email}`,
                     id: `${userResult.data.id}`,
                 });
-                navigate("/profile");
+                navigate("/");
             }catch (e){
                 console.error(e)
             }
@@ -53,12 +52,11 @@ function CustomContextProvider({children}) {
                 username: `${isAuthenticated.username}`,
                 password: `${isAuthenticated.password}`,
             })
-            console.log(loginData)
-            console.log("Gebruiker is ingelogd!");
             localStorage.setItem("token", `${loginData.data.accessToken}`)
             setIsAuthenticated({
                 isAuth: true,
                 token: `${loginData.data.accessToken}`,
+                username: `${loginData.data.username}`
             })
             navigate("/search");
         }catch (e) {

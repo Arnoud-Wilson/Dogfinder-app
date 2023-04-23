@@ -112,3 +112,10 @@ Note: Beware of modifying this element as it can break the animations - you shou
     margin-bottom: 6px;
 }
 
+.navbar .username {
+    font-size: 1em;
+    position: fixed;
+    right: 140px;
+    top: 6px;
+}
+

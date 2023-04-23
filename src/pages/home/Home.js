@@ -32,7 +32,7 @@ function Home() {
                 >Registreer</button>
                 <button
                     className="home-button"
-                    onClick={loginFunction}
+                    onClick={()=> navigate("/login")}
                 >Inloggen</button>
                 <button
                     className="home-button"

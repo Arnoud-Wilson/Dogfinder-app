@@ -31,9 +31,11 @@ function Search() {
                 </p>
                 <button
                     className="home-button"
+                    onClick={()=> navigate("/signup")}
                 >Registreer</button>
                 <button
                     className="home-button"
+                    onClick={()=> navigate("/login")}
                 >Inloggen</button>
             </article>
             {isAuth === true &&

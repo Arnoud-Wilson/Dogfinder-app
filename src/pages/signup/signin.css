@@ -1,0 +1,38 @@
+.register-user-outer-wrapper {
+    height: 94vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-user-tile {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    width: 50vw;
+    height: 55vh;
+    padding: 8px;
+}
+
+.register-user-tile h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.register-user-tile input, label {
+    margin: 5px;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.register-user-tile button, p {
+    margin: 8px;
+}
+
+.error-message {
+    color: red;
+}

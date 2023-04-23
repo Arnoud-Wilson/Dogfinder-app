@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import Navigation from "./components/navigation/Navigation";
 import AllDogs from "./pages/alldogs/AllDogs";
 import Home from "./pages/home/Home";
@@ -8,9 +8,13 @@ import SignUp from "./pages/signup/SignUp";
 import SingleDog from "./pages/singledog/SingleDog";
 import NotFound from "./pages/notfound/NotFound";
 import './App.css';
-import {Route, Routes} from "react-router-dom";
+import {Navigate, Route, Routes} from "react-router-dom";
+import DogFinder from "./pages/Dogfinder/DogFinder";
+import {AuthContext} from "./context/CustomContextProvider";
 
 function App() {
+    const { isAuth } = useContext(AuthContext);
+
   return (
       <>
           <Navigation />
@@ -21,6 +25,7 @@ function App() {
                 <Route path="/alldogs" element={ <AllDogs /> } />
                 <Route path="/search" element={ <Search /> } />
                 <Route path="/singledog/:id" element={ <SingleDog /> } />
+                <Route path="dogfinder/:kids/:dogs/:train/:energy/:protect" element={ isAuth === true ? <DogFinder /> : < Navigate to="/" /> } />
                 <Route path="*" element={ <NotFound /> } />
           </Routes>
       </>
@@ -28,3 +33,5 @@ function App() {
 }
 
 export default App;
+
+

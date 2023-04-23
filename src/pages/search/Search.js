@@ -1,35 +1,24 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import "./search.css";
-import axios from "axios";
+import {useNavigate} from "react-router-dom";
+import {AuthContext} from "../../context/CustomContextProvider";
+
 
 function Search() {
-    const [result, setResult] = useState();
-    const [kids, setKids] = useState();
-    const [dogs, setDogs] = useState();
-    const [train, setTrain] = useState();
-    const [energy, setEnergy] = useState();
-    const [protect, setProtect] =useState();
+    const { isAuth } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const [kids, setKids] = useState(5);
+    const [dogs, setDogs] = useState(5);
+    const [train, setTrain] = useState(5);
+    const [energy, setEnergy] = useState(5);
+    const [protect, setProtect] =useState(5);
 
-    function dogFinder(e) {
+
+    function handleSubmit(e) {
         e.preventDefault();
-
-        async function getData() {
-            try {
-                const response = await axios.get(`https://api.api-ninjas.com/v1/dogs?trainability=${train}`, { headers: {
-                        "X-API-KEY": "LKEoOat+ZzKlufYLyU0OeA==GEab0iT2DhVtWhYz",
-                    }})
-
-                console.log(response.data)
-
-                setResult(response.data);
-            }
-            catch (error) {
-                console.error(error);
-            }
-        }
-        void getData();
-
+        navigate(`/dogfinder/${kids}/${dogs}/${train}/${energy}/${protect}`)
     }
+
 
 
     return (
@@ -47,57 +36,59 @@ function Search() {
                     className="home-button"
                 >Inloggen</button>
             </article>
-            <article className='dogfinder-form'>
-                <h3>Vul hier jouw voorkeuren in:</h3>
-                <form onSubmit={dogFinder}>
-                    <label htmlFor="kids">Goed met kinderen?</label>
-                    <input
-                        type="range"
-                        id="kids"
-                        name="kids"
-                        min="0" max="5"
-                        onChange={(e)=> setKids(e.target.value)}
-                    />
-                    <br/>
-                    <label htmlFor="dogs">Goed met honden?</label>
-                    <input
-                        type="range"
-                        id="dogs"
-                        name="dogs"
-                        min="0" max="5"
-                        onChange={(e)=> setDogs(e.target.value)}
-                    />
-                    <br/>
-                    <label htmlFor="train">Trainbaarheid?</label>
-                    <input
-                        type="range"
-                        id="train"
-                        name="train"
-                        min="0" max="5"
-                        onChange={(e)=> setTrain(e.target.value)}
-                    />
-                    <br/>
-                    <label htmlFor="energy">Hoeveelheid energie?</label>
-                    <input
-                        type="range"
-                        id="energy"
-                        name="energy"
-                        min="0" max="5"
-                        onChange={(e)=> setEnergy(e.target.value)}
-                    />
-                    <br/>
-                    <label htmlFor="protect">Waakzaamheid?</label>
-                    <input
-                        type="range"
-                        id="protect"
-                        name="protect"
-                        min="0" max="5"
-                        onChange={(e)=> setProtect(e.target.value)}
-                    />
-                    <br/>
-                    <button className="home-button">Zoek mijn hond!</button>
-                </form>
-            </article>
+            {isAuth === true &&
+                <article className="dogfinder-form">
+                    <h3>Vul hier jouw voorkeuren in:</h3>
+                    <form onSubmit={handleSubmit}>
+                        <label htmlFor="kids">Goed met kinderen?</label>
+                        <input
+                            type="range"
+                            id="kids"
+                            name="kids"
+                            min="0" max="5"
+                            onChange={(e) => setKids(e.target.value)}
+                        />
+                        <br/>
+                        <label htmlFor="dogs">Goed met honden?</label>
+                        <input
+                            type="range"
+                            id="dogs"
+                            name="dogs"
+                            min="0" max="5"
+                            onChange={(e) => setDogs(e.target.value)}
+                        />
+                        <br/>
+                        <label htmlFor="train">Trainbaarheid?</label>
+                        <input
+                            type="range"
+                            id="train"
+                            name="train"
+                            min="0" max="5"
+                            onChange={(e) => setTrain(e.target.value)}
+                        />
+                        <br/>
+                        <label htmlFor="energy">Hoeveelheid energie?</label>
+                        <input
+                            type="range"
+                            id="energy"
+                            name="energy"
+                            min="0" max="5"
+                            onChange={(e) => setEnergy(e.target.value)}
+                        />
+                        <br/>
+                        <label htmlFor="protect">Waakzaamheid?</label>
+                        <input
+                            type="range"
+                            id="protect"
+                            name="protect"
+                            min="0" max="5"
+                            onChange={(e) => setProtect(e.target.value)}
+                        />
+                        <br/>
+                        <button className="home-button">Zoek mijn hond!</button>
+                    </form>
+                </article>
+            }
         </section>
     );
 }

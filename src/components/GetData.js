@@ -3,6 +3,8 @@ import axios from "axios";
 import {useNavigate} from "react-router-dom";
 import GetDogImage from "./GetDogImage";
 
+
+
 function GetAllData({searchId, urlId}) {
     const [result, setResult] = useState();
     const navigate = useNavigate();

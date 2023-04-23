@@ -7,8 +7,6 @@ function AllDogs() {
 
     const [page, setPage] = useState(0);
 
-    console.log(page)
-
     return (
         <>
             <section className="outer-wrapper">

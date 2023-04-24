@@ -1,7 +1,7 @@
 import React, {createContext, useState, useEffect} from "react";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
-import jwt_decode from "jwt-decode";
+import checkIfTokenIsValid from "../helpers/checkIfTokenIsValid";
 
 
 export const AuthContext = createContext({ });
@@ -15,13 +15,14 @@ function CustomContextProvider({children}) {
         isAuth: false,
         token: null,
         username: null,
+        password: null,
         email: null,
         id: null,
+        status: "pending",
     });
 
     useEffect(() => {
         async function setUser() {
-            const decoded = jwt_decode(localToken)
 
             try {
                 const userResult = await axios.get("https://frontend-educational-backend.herokuapp.com/api/user", { headers: {
@@ -33,13 +34,22 @@ function CustomContextProvider({children}) {
                     username: `${userResult.data.username}`,
                     email: `${userResult.data.email}`,
                     id: `${userResult.data.id}`,
+                    status: "done",
                 });
                 navigate("/");
             }catch (e){
-                console.error(e)
+                setIsAuthenticated({status: "done"});
+                console.error(e);
             }
         }
-        localToken !== null && setUser()
+        if (localToken !== null && checkIfTokenIsValid(localToken)) {
+            void setUser()
+        }
+        else {
+            setIsAuthenticated({
+                status: "done",
+                isAuth: false,
+            })}
     }, []);
 
 
@@ -56,11 +66,13 @@ function CustomContextProvider({children}) {
             setIsAuthenticated({
                 isAuth: true,
                 token: `${loginData.data.accessToken}`,
-                username: `${loginData.data.username}`
+                username: `${loginData.data.username}`,
+                status: "done",
             })
             navigate("/search");
         }catch (e) {
-            console.error(e)
+            setIsAuthenticated({status: "done"});
+            console.error(e);
         }
     }
 
@@ -73,6 +85,7 @@ function CustomContextProvider({children}) {
             username: null,
             email: null,
             token: null,
+            status: "done",
         });
         navigate("/");
     }
@@ -84,6 +97,7 @@ function CustomContextProvider({children}) {
         setIsAuthenticated: setIsAuthenticated,
         isAuth: isAuthenticated.isAuth,
         username: isAuthenticated.username,
+        password: isAuthenticated.password,
         email: isAuthenticated.email,
         token: isAuthenticated.token,
         id: isAuthenticated.id,
@@ -94,7 +108,7 @@ function CustomContextProvider({children}) {
 
     return (
         <AuthContext.Provider value={auth}>
-            {children}
+            {isAuthenticated.status === "done" ? children : <p>Loading...</p>}
         </AuthContext.Provider>
     );
 }

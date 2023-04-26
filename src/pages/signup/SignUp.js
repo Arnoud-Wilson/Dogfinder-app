@@ -1,6 +1,6 @@
 import React, { useState} from "react";
 import { Link, useNavigate } from 'react-router-dom';
-import "./signin.css"
+import "./signup.css"
 import axios from "axios";
 
 
@@ -11,6 +11,7 @@ function SignUp() {
         password: "",
         username: "",
         role: "user",
+        error: "",
     })
 
     function changeHandler(e) {
@@ -35,13 +36,13 @@ function SignUp() {
             navigate("/login")
         }
         catch (e) {
+            setFormState({ error: e.response.data.message })
             console.error(e)
         }
     }
 
     function inputData(e) {
         e.preventDefault();
-        console.log(formState);
         register();
     }
 
@@ -66,6 +67,7 @@ function SignUp() {
                         type="text"
                         name="username"
                         onChange={changeHandler}
+                        minLength={6}
                     />
                     <br/>
                     <label htmlFor="password">Wachtwoord:</label>
@@ -74,11 +76,12 @@ function SignUp() {
                         type="password"
                         name="password"
                         onChange={changeHandler}
+                        minLength={6}
                     />
                     <br/>
                     <button className="home-button">Registreer</button>
                 </form>
-                <p className="error-message">Hier komt eventueel een foutmelding</p>
+                <p className="error-message">{formState.error}</p>
                 <p>Klik <Link to="/signup" className="signin-link">hier</Link> als je je wachtwoord vergeten bent.</p>
             </article>
         </section>

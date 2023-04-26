@@ -30,6 +30,7 @@ function Login() {
                     type="text"
                     name="username"
                     onChange={changeHandler}
+                    minLength={6}
                 />
                 <br/>
                 <label htmlFor="password">Wachtwoord:</label>
@@ -38,11 +39,12 @@ function Login() {
                     type="password"
                     name="password"
                     onChange={changeHandler}
+                    minLength={6}
                 />
                 <br/>
                 <button className="home-button">Inloggen</button>
             </form>
-            <p className="error-message">Hier komt eventueel een foutmelding</p>
+            {/*/!*<p className="error-message">Hier komt eventueel een foutmelding</p>    *!/ Krijg geen bruikbare response terug??*/}
             <p>Heb je nog geen account? <Link to="/signup" className="signin-link">Registreer</Link> je dan eerst.</p>
         </article>
         </section>

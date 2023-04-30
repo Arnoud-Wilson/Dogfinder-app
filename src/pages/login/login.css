@@ -33,8 +33,9 @@
     margin: 8px;
 }
 
-.signin-link {
+.signup-link {
     color: black;
+    cursor: pointer;
 }
 
 

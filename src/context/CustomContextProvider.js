@@ -67,7 +67,7 @@ function CustomContextProvider({children}) {
                 token: `${loginData.data.accessToken}`,
                 username: `${loginData.data.username}`,
                 status: "done",
-            })
+            });
             navigate("/search");
         }catch (e) {
             setIsAuthenticated({status: "done"});

@@ -45,7 +45,7 @@ function Login() {
                 <button className="home-button">Inloggen</button>
             </form>
             {/*/!*<p className="error-message">Hier komt eventueel een foutmelding</p>    *!/ Krijg geen bruikbare response terug??*/}
-            <p>Heb je nog geen account? <Link to="/signup" className="signin-link">Registreer</Link> je dan eerst.</p>
+            <p>Heb je nog geen account? <Link to="/signup" className="signup-link">Registreer</Link> je dan eerst.</p>
         </article>
         </section>
     );

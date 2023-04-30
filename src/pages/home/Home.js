@@ -1,12 +1,10 @@
 import React, {useContext} from "react";
 import "./home.css";
 import { useNavigate } from 'react-router-dom';
-import {AuthContext} from "../../context/CustomContextProvider";
 import axios from "axios";
 
 
 function Home() {
-    const { loginFunction } = useContext(AuthContext);
     const navigate = useNavigate();
 
     async function testFunction() {

@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@500&display=swap');
-
 .navbar {
-    /*position: fixed;*/
+    position: fixed;
     width: 100vw;
     height: 40px;
     background-color: #F5A50F;

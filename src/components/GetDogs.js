@@ -8,7 +8,7 @@ function GetDogs({page}) {
     useEffect(() => {
         async function getTwentyDogs() {
             try {
-                const response = await axios.get(`https://api.thedogapi.com/v1/breeds?limit=12&page=${page}`)
+                const response = await axios.get(`https://api.thedogapi.com/v1/breeds?limit=20&page=${page}`)
 
                 setResult(response.data);
             }
@@ -23,6 +23,7 @@ function GetDogs({page}) {
         result.length > 0 &&
         result.map((dog) => {
             return <GetAllData
+                key = {dog.id}
                 searchId = {dog.id}
             />
         }));

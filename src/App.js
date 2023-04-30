@@ -9,8 +9,9 @@ import SingleDog from "./pages/singledog/SingleDog";
 import NotFound from "./pages/notfound/NotFound";
 import './App.css';
 import {Navigate, Route, Routes} from "react-router-dom";
-import DogFinder from "./pages/Dogfinder/DogFinder";
+import DogFinder from "./components/DogFinder";
 import {AuthContext} from "./context/CustomContextProvider";
+import DogFinderPage from "./pages/Dogfinder/DogFinderPage";
 
 function App() {
     const { isAuth } = useContext(AuthContext);
@@ -25,7 +26,7 @@ function App() {
                 <Route path="/alldogs" element={ <AllDogs /> } />
                 <Route path="/search" element={ <Search /> } />
                 <Route path="/singledog/:id" element={ <SingleDog /> } />
-                <Route path="dogfinder/:kids/:dogs/:train/:energy/:protect" element={ isAuth === true ? <DogFinder /> : < Navigate to="/" /> } />
+                <Route path="dogfinderpage/:kids/:dogs/:train/:energy/:protect" element={ isAuth === true ? <DogFinderPage /> : < Navigate to="/" /> } />
                 <Route path="*" element={ <NotFound /> } />
           </Routes>
       </>

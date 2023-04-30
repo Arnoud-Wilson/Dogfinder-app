@@ -13,14 +13,14 @@ function AllDogs() {
             <div className="button-wrapper" >
                 <button
                         className="all-dog-button"
-                        onClick={() => setPage(page - 1) }
-                        disabled = { page <= 0  }
+                        onClick={() => setPage(page - 1)}
+                        disabled = {page <= 0}
                         >Vorige
                         </button>
                 <button
                         className="all-dog-button"
-                        onClick= {() => setPage(page + 1) }
-                        disabled = { page >= 14  }
+                        onClick= {() => setPage(page + 1)}
+                        disabled = {page >= 14}
                         >Volgende
                         </button>
             </div>
@@ -33,13 +33,13 @@ function AllDogs() {
                     <button
                         className="all-dog-button"
                         onClick={() => setPage(page - 1)}
-                        disabled = {  page <= 0 }
+                        disabled = {page <= 0}
                     >Vorige
                     </button>
                     <button
                         className="all-dog-button"
                         onClick= {() => setPage(page + 1)}
-                        disabled = { page >= 14  }
+                        disabled = {page >= 14}
                     >Volgende
                     </button>
                 </div>

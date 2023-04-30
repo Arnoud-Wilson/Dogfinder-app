@@ -82,7 +82,7 @@ function SignUp() {
                     <button className="home-button">Registreer</button>
                 </form>
                 <p className="error-message">{formState.error}</p>
-                <p>Klik <Link to="/signup" className="signin-link">hier</Link> als je je wachtwoord vergeten bent.</p>
+                <p>Klik <Link to="" className="signin-link">hier</Link> als je je wachtwoord vergeten bent.</p>
             </article>
         </section>
     );

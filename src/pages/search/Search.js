@@ -16,9 +16,8 @@ function Search() {
 
     function handleSubmit(e) {
         e.preventDefault();
-        navigate(`/dogfinder/${kids}/${dogs}/${train}/${energy}/${protect}`)
+        navigate(`/dogfinderpage/${kids}/${dogs}/${train}/${energy}/${protect}`)
     }
-
 
 
     return (
@@ -47,7 +46,7 @@ function Search() {
                             type="range"
                             id="kids"
                             name="kids"
-                            min="0" max="5"
+                            min="1" max="5"
                             onChange={(e) => setKids(e.target.value)}
                         />
                         <br/>
@@ -56,7 +55,7 @@ function Search() {
                             type="range"
                             id="dogs"
                             name="dogs"
-                            min="0" max="5"
+                            min="1" max="5"
                             onChange={(e) => setDogs(e.target.value)}
                         />
                         <br/>
@@ -65,7 +64,7 @@ function Search() {
                             type="range"
                             id="train"
                             name="train"
-                            min="0" max="5"
+                            min="1" max="5"
                             onChange={(e) => setTrain(e.target.value)}
                         />
                         <br/>
@@ -74,7 +73,7 @@ function Search() {
                             type="range"
                             id="energy"
                             name="energy"
-                            min="0" max="5"
+                            min="1" max="5"
                             onChange={(e) => setEnergy(e.target.value)}
                         />
                         <br/>
@@ -83,7 +82,7 @@ function Search() {
                             type="range"
                             id="protect"
                             name="protect"
-                            min="0" max="5"
+                            min="1" max="5"
                             onChange={(e) => setProtect(e.target.value)}
                         />
                         <br/>

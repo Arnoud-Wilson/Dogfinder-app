@@ -23,7 +23,14 @@ function Home() {
     return (
             <section className="home-section">
                 <h2>The Dog finder app</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias beatae ipsa itaque numquam quibusdam quod, rem! A accusantium aliquam, aperiam architecto at autem commodi consequuntur culpa cumque deserunt dolores doloribus error excepturi fugit illum incidunt ipsa laboriosam maiores minus molestias nam necessitatibus nemo, nesciunt porro quae quia quibusdam quis sapiente velit vitae. Consequatur consequuntur distinctio doloremque ducimus explicabo inventore iste maxime natus omnis, optio perferendis perspiciatis repudiandae suscipit! Accusamus aliquam ex nemo similique voluptatibus.</p>
+                <p>Wat leuk dat je onze Dog finder app hebt gevonden!
+                    <br/><br/>
+                    Waarschijnlijk ben je op zoek naar een hondenras wat goed bij jou e/o jouw gezin past en hoop je dat deze dogfinder app je verder op weg helpt.
+                    <br/><br/>
+                    Wist je dat onze database gevuld is met bijna 200 verschillende hondenrassen? Grote kans dus dat er wel een match voor jou tussen zit.
+                    <br/><br/>
+                    Als je je registreert via de "registreer" button onderin, krijg je toegang tot alle faciliteiten die de dogfinder app biedt.
+                </p>
                 <button
                     className="home-button"
                     onClick={()=> navigate("/signup")}
@@ -32,10 +39,10 @@ function Home() {
                     className="home-button"
                     onClick={()=> navigate("/login")}
                 >Inloggen</button>
-                <button
-                    className="home-button"
-                    onClick={testFunction}
-                >Backend test</button>
+                {/*<button*/}
+                {/*    className="home-button"*/}
+                {/*    onClick={testFunction}*/}
+                {/*>Backend test</button>*/}
             </section>
     );
 }

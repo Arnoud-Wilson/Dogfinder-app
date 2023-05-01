@@ -4,7 +4,7 @@ import {AuthContext} from "../../context/CustomContextProvider";
 import "./login.css"
 
 function Login() {
-    const { isAuthenticated, setIsAuthenticated, loginFunction } = useContext(AuthContext);
+    const {isAuthenticated, setIsAuthenticated, loginFunction } = useContext(AuthContext);
 
 
     function changeHandler(e) {

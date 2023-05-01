@@ -91,7 +91,7 @@ function CustomContextProvider({children}) {
 
 
     const auth = {
-        // ...isAuthenticated
+        // ...isAuthenticated,
         isAuthenticated: isAuthenticated,
         setIsAuthenticated: setIsAuthenticated,
         isAuth: isAuthenticated.isAuth,

@@ -24,9 +24,9 @@ function Search() {
         <section className="search-outer-wrapper">
             <article className="dogfinder-text">
                 <h2>The dog finder</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad animi aperiam architecto culpa deleniti,
-                    dignissimos dolor eius esse est exercitationem fugit impedit incidunt ipsum laborum minima nihil obcaecati,
-                    odio optio recusandae repellendus reprehenderit rerum sed suscipit tempora totam ut voluptate?
+                <p>Je bent er bijna!
+                    <br/>
+                    Wil je onze speurhond aan het werk zetten? Vergeet dan niet dat je eerst moet registreren of in moet loggen, daarna krijg je het scherm met sliders te zien waarbij je jouw voorkeuren en wensen kan aangeven zodat wij op zoek kunnen gaan naar de perfecte match! Laat je het ons weten als jij de perfecte match gevonden hebt? Succes.
                 </p>
                 <button
                     className="home-button"

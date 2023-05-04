@@ -1,6 +1,6 @@
 <br/>
 <section align="center">
-  <a href="https://github.com//">
+  <a href="https://github.com/Arnoud-Wilson/Dogfinder-app">
     <img src="./src/assets/Dogfinder%20round.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -18,7 +18,7 @@
 * [About the Project](#about-the-project)
 * [Built With](#built-with)
 * [Getting Started](#getting-started)
-    * [Installation](#installation)
+  * [Installation](#installation)
 * [Usage](#usage)
 * [Contributing](#contributing)
 * [Authors](#authors)
@@ -28,7 +28,7 @@
 
 ![Screen Shot](./src/assets/screenshot.png)
 
-Dogs are amazing and fun to be around with. But when you think about getting a dog for yourself, it gets a little complicated 
+Dogs are amazing and fun to be around with. But when you think about getting a dog for yourself, it gets a little complicated
 
 Here's why:
 
@@ -132,5 +132,8 @@ Contributions are what make the open source community such an amazing place to b
 
 * This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 * The docs for the backend of this app can be found at: [NOVI](https://github.com/hogeschoolnovi/novi-educational-backend-documentation).
+* [API ninjas](https://api-ninjas.com/) and [The dog API](https://thedogapi.com/) for the delivery of the dog breeds data.
 * [react-burger-menu](https://www.npmjs.com/package/react-burger-menu) for the nice burger menu.
 * [axios](https://www.npmjs.com/package/axios) for the promise based HTTP client for the browser and node.js
+* [Karsten Winegeart](https://unsplash.com/@karsten116) for the nice background picture.
+

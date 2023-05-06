@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 
+
 function GetDogImage({imageId}) {
     const [result, setResult] = useState();
 
@@ -17,7 +18,6 @@ function GetDogImage({imageId}) {
         }
         void getImage();
     }, [imageId]);
-
 
     return (
         result !== undefined &&

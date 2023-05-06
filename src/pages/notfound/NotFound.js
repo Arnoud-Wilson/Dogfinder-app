@@ -1,6 +1,7 @@
 import React from "react";
 import "./notfound.css"
 
+
 function NotFound() {
 
     return (

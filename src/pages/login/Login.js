@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import {AuthContext} from "../../context/CustomContextProvider";
 import "./login.css"
 
+
 function Login() {
     const {isAuthenticated, setIsAuthenticated, loginFunction } = useContext(AuthContext);
-
 
     function changeHandler(e) {
         e.preventDefault();
@@ -21,7 +21,7 @@ function Login() {
         <section className="login-user-outer-wrapper">
         <article className="login-user-tile">
             <h1>Inloggen</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias cum debitis dolor dolore fuga id molestias qui quo unde?</p>
+            <p>Log in om toegang te krijgen tot al onze faciliteiten</p>
 
             <form onSubmit={loginFunction} >
                 <label htmlFor="username">Gebruikersnaam:</label>

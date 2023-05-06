@@ -4,11 +4,9 @@ import {useNavigate} from "react-router-dom";
 import GetDogImage from "./GetDogImage";
 
 
-
 function GetAllData({searchId, urlId}) {
     const [result, setResult] = useState();
     const navigate = useNavigate();
-
 
     useEffect(() => {
         async function getData() {
@@ -23,7 +21,6 @@ function GetAllData({searchId, urlId}) {
         }
         void getData();
     }, [searchId]);
-
 
     if  (result !== undefined && urlId === undefined) {
         return (

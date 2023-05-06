@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import GetAllData from "./GetData";
 
+
 function GetDogs({page}) {
     const [result, setResult] = useState([]);
 

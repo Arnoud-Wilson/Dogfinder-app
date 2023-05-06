@@ -9,9 +9,9 @@ import SingleDog from "./pages/singledog/SingleDog";
 import NotFound from "./pages/notfound/NotFound";
 import './App.css';
 import {Navigate, Route, Routes} from "react-router-dom";
-import DogFinder from "./components/DogFinder";
 import {AuthContext} from "./context/CustomContextProvider";
 import DogFinderPage from "./pages/Dogfinder/DogFinderPage";
+
 
 function App() {
     const { isAuth } = useContext(AuthContext);

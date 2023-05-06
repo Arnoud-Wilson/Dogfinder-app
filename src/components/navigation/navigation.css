@@ -40,9 +40,6 @@
 
 .bm-burger-bars {
     border-radius: 4px;
-}
-
-.bm-burger-bars-hover {
     background: #0e1111;
 }
 
@@ -76,10 +73,6 @@
     list-style: none;
     font-size: 1.2em;
     font-family: 'Overpass', sans-serif;
-}
-
-.bm-overlay {
-    background: rgba(0, 0, 0, 0.3);
 }
 
 .menu-item {

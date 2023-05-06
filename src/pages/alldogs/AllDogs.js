@@ -20,7 +20,7 @@ function AllDogs() {
                 <button
                         className="all-dog-button"
                         onClick= {() => setPage(page + 1)}
-                        disabled = {page >= 14}
+                        disabled = {page >= 8}
                         >Volgende
                         </button>
             </div>
@@ -39,7 +39,7 @@ function AllDogs() {
                     <button
                         className="all-dog-button"
                         onClick= {() => setPage(page + 1)}
-                        disabled = {page >= 14}
+                        disabled = {page >= 8}
                     >Volgende
                     </button>
                 </div>

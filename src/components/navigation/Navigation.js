@@ -10,7 +10,7 @@ function Navigation() {
 
     return (
         <nav className="navbar">
-            <Menu noOverlay>
+            <Menu>
                 <ul>
                     <li className="nav-menu-list"><NavLink to="/" className="menu-item" >Home</NavLink></li>
                     <li className="nav-menu-list"><NavLink to="/login" className="menu-item" >Inloggen</NavLink></li>
@@ -20,13 +20,13 @@ function Navigation() {
                 </ul>
             </Menu>
             <p>Dog finder</p>
-            {isAuth === false ?
-                <button className="navbar-button" onClick={()=> navigate("/login")}>Inloggen</button>
-                :
+            {isAuth ?
                 <>
-                <p className="username">{username}</p>
-                <button className="navbar-button" onClick={logoutFunction}>Uitloggen</button>
+                    <p className="username">{username}</p>
+                    <button className="navbar-button" onClick={logoutFunction}>Uitloggen</button>
                 </>
+                :
+                <button className="navbar-button" onClick={()=> navigate("/login")}>Inloggen</button>
             }
         </nav>
     );

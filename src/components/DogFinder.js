@@ -21,7 +21,6 @@ function DogFinder({preferences}) {
     const dogsFetchedUnique = [];
     const dogfinderResult = [];
 
-
     useEffect(() => {
     async function getData() {
 
@@ -58,14 +57,12 @@ function DogFinder({preferences}) {
                 dog.protectiveness == preferenceId.protect){
 
                 dogfinderResult.push(dog)
-
             }
         })
         return dogfinderResult;
     }
 
     filterDogs(dogfinderResult);
-
 
     if (dogfinderResult.length >= 1 && dataFetched === true) {
         return (

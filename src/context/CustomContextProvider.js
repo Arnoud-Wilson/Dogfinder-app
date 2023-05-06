@@ -6,7 +6,6 @@ import checkIfTokenIsValid from "../helpers/checkIfTokenIsValid";
 
 export const AuthContext = createContext({ });
 
-
 function CustomContextProvider({children}) {
     const navigate = useNavigate();
     const localToken = localStorage.getItem("token");
@@ -52,7 +51,6 @@ function CustomContextProvider({children}) {
             })}
     }, []);
 
-
     async function login(e) {
         e.preventDefault();
 
@@ -75,7 +73,6 @@ function CustomContextProvider({children}) {
         }
     }
 
-
     function logOut(e) {
         e.preventDefault();
         localStorage.removeItem("token");
@@ -89,21 +86,13 @@ function CustomContextProvider({children}) {
         navigate("/");
     }
 
-
     const auth = {
-        // ...isAuthenticated,
+        ...isAuthenticated,
         isAuthenticated: isAuthenticated,
         setIsAuthenticated: setIsAuthenticated,
-        isAuth: isAuthenticated.isAuth,
-        username: isAuthenticated.username,
-        password: isAuthenticated.password,
-        email: isAuthenticated.email,
-        token: isAuthenticated.token,
-        id: isAuthenticated.id,
         loginFunction: login,
         logoutFunction: logOut,
     }
-
 
     return (
         <AuthContext.Provider value={auth}>

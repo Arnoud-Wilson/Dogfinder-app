@@ -13,12 +13,10 @@ function Search() {
     const [energy, setEnergy] = useState(5);
     const [protect, setProtect] =useState(5);
 
-
     function handleSubmit(e) {
         e.preventDefault();
         navigate(`/dogfinderpage/${kids}/${dogs}/${train}/${energy}/${protect}`)
     }
-
 
     return (
         <section className="search-outer-wrapper">

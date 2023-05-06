@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import {AuthContext} from "../../context/CustomContextProvider";
 import "./login.css"
 
+
 function Login() {
     const {isAuthenticated, setIsAuthenticated, loginFunction } = useContext(AuthContext);
-
 
     function changeHandler(e) {
         e.preventDefault();

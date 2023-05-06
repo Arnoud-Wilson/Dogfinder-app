@@ -4,6 +4,7 @@ import "./navigation.css";
 import {NavLink, useNavigate } from "react-router-dom";
 import {AuthContext} from "../../context/CustomContextProvider";
 
+
 function Navigation() {
     const {isAuth, logoutFunction, username} = useContext(AuthContext);
     const navigate = useNavigate();

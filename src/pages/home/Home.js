@@ -32,17 +32,17 @@ function Home() {
                     Als je je registreert via de "registreer" button onderin, krijg je toegang tot alle faciliteiten die de dogfinder app biedt.
                 </p>
                 <button
-                    className="home-button"
+                    className="standard-button"
                     onClick={()=> navigate("/signup")}
                 >Registreer</button>
                 <button
-                    className="home-button"
+                    className="standard-button"
                     onClick={()=> navigate("/login")}
                 >Inloggen</button>
-                {/*<button*/}
-                {/*    className="home-button"*/}
-                {/*    onClick={testFunction}*/}
-                {/*>Backend test</button>*/}
+                <button
+                    className="standard-button"
+                    onClick={testFunction}
+                >Backend test</button>
             </section>
     );
 }

@@ -23,7 +23,7 @@ body {
     text-align: center;
 }
 
-.home-button {
+.standard-button {
     background-color: #0e1111;
     color: white;
     padding: 4px 16px;
@@ -33,6 +33,6 @@ body {
     margin: 0 8px 20px 8px;
 }
 
-.home-button:hover {
+.standard-button:hover {
     cursor: pointer;
 }

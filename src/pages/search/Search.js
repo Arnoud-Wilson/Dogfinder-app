@@ -29,11 +29,11 @@ function Search() {
                     Wil je onze speurhond aan het werk zetten? Vergeet dan niet dat je eerst moet registreren of in moet loggen, daarna krijg je het scherm met sliders te zien waarbij je jouw voorkeuren en wensen kan aangeven zodat wij op zoek kunnen gaan naar de perfecte match! Laat je het ons weten als jij de perfecte match gevonden hebt? Succes.
                 </p>
                 <button
-                    className="home-button"
+                    className="standard-button"
                     onClick={()=> navigate("/signup")}
                 >Registreer</button>
                 <button
-                    className="home-button"
+                    className="standard-button"
                     onClick={()=> navigate("/login")}
                 >Inloggen</button>
             </article>
@@ -86,7 +86,7 @@ function Search() {
                             onChange={(e) => setProtect(e.target.value)}
                         />
                         <br/>
-                        <button className="home-button">Zoek mijn hond!</button>
+                        <button className="standard-button">Zoek mijn hond!</button>
                     </form>
                 </article>
             }

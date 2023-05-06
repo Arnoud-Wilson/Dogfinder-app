@@ -28,7 +28,7 @@
 
 ![Screen Shot](./src/assets/screenshot.png)
 
-Dogs are amazing and fun to be around with. But when you think about getting a dog for yourself, it gets a little complicated
+Dogs are amazing and fun to be around with. But when you think about getting a dog for yourself, it gets a little complicated.
 
 Here's why:
 

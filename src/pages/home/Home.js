@@ -7,16 +7,6 @@ import axios from "axios";
 function Home() {
     const navigate = useNavigate();
 
-    async function testFunction() {
-        try {
-            const result = await axios.get("https://frontend-educational-backend.herokuapp.com/api/test/all")
-            console.log(result)
-
-        }catch (e) {
-            console.error(e)
-        }
-    }
-
     return (
             <section className="home-section">
                 <h2>The Dog finder app</h2>
@@ -36,10 +26,6 @@ function Home() {
                     className="standard-button"
                     onClick={()=> navigate("/login")}
                 >Inloggen</button>
-                <button
-                    className="standard-button"
-                    onClick={testFunction}
-                >Backend test</button>
             </section>
     );
 }

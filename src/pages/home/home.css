@@ -1,8 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@500&display=swap');
 
-* {
-    font-family: 'Overpass', sans-serif;
-}
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+    4. Areas
+        4.1 Home section
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
 
 body {
     background-image: url("../../assets/bull.jpg");
@@ -12,6 +21,20 @@ body {
     background-size: cover;
     background-color: #206685;
 }
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+* {
+    font-family: 'Overpass', sans-serif;
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Home section ------------------------- */
 
 .home-section {
     border: 2px solid black;
@@ -36,3 +59,11 @@ body {
 .standard-button:hover {
     cursor: pointer;
 }
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
+
+
+
+
+
+

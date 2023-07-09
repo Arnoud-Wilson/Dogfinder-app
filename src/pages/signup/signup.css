@@ -1,3 +1,17 @@
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+    4. Areas
+        4.1 Register tile
+        4.2 Error handling register tile
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
 .register-user-outer-wrapper {
     height: 94vh;
     display: flex;
@@ -5,6 +19,16 @@
     justify-content: center;
     align-items: center;
 }
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Register tile ------------------------- */
 
 .register-user-tile {
     display: flex;
@@ -33,11 +57,19 @@
     margin: 8px;
 }
 
-.error-message {
-    color: red;
-}
-
 .signin-link {
     color: black;
     cursor: not-allowed;
 }
+
+/* --------------- 4.2 Error handling register tile ------------------- */
+
+.error-message {
+    color: red;
+}
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
+
+
+
+

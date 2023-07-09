@@ -21,10 +21,12 @@ function Home() {
                 <button
                     className="standard-button"
                     onClick={()=> navigate("/signup")}
+                    type="button"
                 >Registreer</button>
                 <button
                     className="standard-button"
                     onClick={()=> navigate("/login")}
+                    type="button"
                 >Inloggen</button>
             </section>
     );

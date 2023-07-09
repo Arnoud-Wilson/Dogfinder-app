@@ -52,9 +52,9 @@ function DogFinder({preferences}) {
         dogsFetchedUnique.map((dog) => {
             if (dog.good_with_children >= preferenceId.kids &&
                 dog.good_with_other_dogs >= preferenceId.dogs &&
-                dog.energy === preferenceId.energy &&
+                dog.energy == preferenceId.energy &&
                 dog.trainability >= preferenceId.train &&
-                dog.protectiveness === preferenceId.protect){
+                dog.protectiveness == preferenceId.protect){
 
                 dogfinderResult.push(dog)
             }

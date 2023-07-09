@@ -24,10 +24,10 @@ function Navigation() {
             {isAuth ?
                 <>
                     <p className="username">{username}</p>
-                    <button className="navbar-button" onClick={logoutFunction}>Uitloggen</button>
+                    <button className="navbar-button" type="button" onClick={logoutFunction}>Uitloggen</button>
                 </>
                 :
-                <button className="navbar-button" onClick={()=> navigate("/login")}>Inloggen</button>
+                <button className="navbar-button" type="button" onClick={()=> navigate("/login")}>Inloggen</button>
             }
         </nav>
     );

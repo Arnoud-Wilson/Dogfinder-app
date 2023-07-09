@@ -1,9 +1,35 @@
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+    4. Areas
+        4.1 Navbar text
+        4.2 Navbar button
+        4.3 Navbar user text
+        4.4 Navbar burger menu
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
 .navbar {
     position: fixed;
     width: 100vw;
     height: 40px;
     background-color: #F5A50F;
 }
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Navbar text ------------------------- */
 
 .navbar p {
     text-align: center;
@@ -12,6 +38,8 @@
     text-transform: uppercase;
     font-size: 2rem;
 }
+
+/* --------------- 4.2 Navbar button ------------------- */
 
 .navbar-button {
     position: fixed;
@@ -29,6 +57,17 @@
     cursor: pointer;
     background: #0e1111;
 }
+
+/* --------------- 4.3 Navbar user text ------------------- */
+
+.navbar .username {
+    font-size: 1em;
+    position: fixed;
+    right: 140px;
+    top: 6px;
+}
+
+/* --------------- 4.4 Navbar burger menu ------------------- */
 
 .bm-burger-button {
     position: fixed;
@@ -89,10 +128,15 @@
     margin-bottom: 6px;
 }
 
-.navbar .username {
-    font-size: 1em;
-    position: fixed;
-    right: 140px;
-    top: 6px;
-}
+/* ------------------------------- 5. Media Queries -------------------------------- */
+
+
+
+
+
+
+
+
+
+
 

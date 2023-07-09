@@ -1,5 +1,20 @@
+
+/*////////// css reset //////////*/
+
 body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+img, picture, video, canvas, svg {
+    max-width: 100%;
 }

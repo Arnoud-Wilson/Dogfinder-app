@@ -1,3 +1,17 @@
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+    4. Areas
+        4.1 Left Dogfinder text tile
+        4.2 Right Dogfinder text tile
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
 .search-outer-wrapper {
     height: 94vh;
     display: flex;
@@ -5,6 +19,16 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Left Dogfinder text tile ------------------------- */
 
 .dogfinder-text {
     border: 2px solid black;
@@ -15,6 +39,8 @@
     text-align: center;
     padding: 10px;
 }
+
+/* --------------- 4.2 Right Dogfinder text tile ------------------- */
 
 .dogfinder-form {
     border: 2px solid black;
@@ -29,4 +55,11 @@
 .search-outer-wrapper button {
     margin: 10px;
 }
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
+
+
+
+
+
 

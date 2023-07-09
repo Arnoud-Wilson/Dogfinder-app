@@ -45,16 +45,16 @@ function DogFinder({preferences}) {
     }void getData();
     }, []);
 
-    dogsFetched.map(x => dogsFetchedUnique.filter(a => a.name == x.name).length > 0 ? null : dogsFetchedUnique.push(x));
+    dogsFetched.map(x => dogsFetchedUnique.filter(a => a.name === x.name).length > 0 ? null : dogsFetchedUnique.push(x));
 
     function filterDogs() {
 
         dogsFetchedUnique.map((dog) => {
             if (dog.good_with_children >= preferenceId.kids &&
                 dog.good_with_other_dogs >= preferenceId.dogs &&
-                dog.energy == preferenceId.energy &&
+                dog.energy === preferenceId.energy &&
                 dog.trainability >= preferenceId.train &&
-                dog.protectiveness == preferenceId.protect){
+                dog.protectiveness === preferenceId.protect){
 
                 dogfinderResult.push(dog)
             }

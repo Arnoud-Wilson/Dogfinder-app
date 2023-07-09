@@ -1,3 +1,17 @@
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+
 .single-dog-outer-wrapper {
     height: 94vh;
     display: flex;
@@ -5,6 +19,16 @@
     justify-content: center;
     align-items: center;
 }
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Dog tile ------------------------- */
 
 .single-dog-tile {
     display: flex;
@@ -17,6 +41,8 @@
     height: 70vh;
     padding: 8px;
 }
+
+/* --------------- 4.2 Dog tile inner ------------------- */
 
 .single-dog-tile h1 {
     font-size: 2em;
@@ -46,3 +72,11 @@
     max-width: 500px;
     max-height: 400px;
 }
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
+
+
+
+
+
+

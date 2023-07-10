@@ -9,9 +9,11 @@ function GetAllData({searchId, urlId}) {
     const navigate = useNavigate();
 
     useEffect(() => {
+        const controller = new AbortController();
+
         async function getData() {
             try {
-                const response = await axios.get(`https://api.thedogapi.com/v1/breeds/${searchId}`);
+                const response = await axios.get(`https://api.thedogapi.com/v1/breeds/${searchId}`,{signal: controller.signal});
 
                 setResult(response.data);
             }
@@ -20,6 +22,11 @@ function GetAllData({searchId, urlId}) {
             }
         }
         void getData();
+
+        return function cleanup() {
+            controller.abort();
+        }
+
     }, [searchId]);
 
     if  (result !== undefined && urlId === undefined) {

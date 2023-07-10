@@ -18,6 +18,7 @@ function CustomContextProvider({children}) {
         email: null,
         id: null,
         status: "pending",
+        error: null,
     });
 
     useEffect(() => {
@@ -68,7 +69,7 @@ function CustomContextProvider({children}) {
             });
             navigate("/search");
         }catch (e) {
-            setIsAuthenticated({status: "done"});
+            setIsAuthenticated({status: "done", error: "Username or password incorrect" });
             console.error(e);
         }
     }

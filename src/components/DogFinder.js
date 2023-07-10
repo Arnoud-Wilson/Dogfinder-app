@@ -22,18 +22,20 @@ function DogFinder({preferences}) {
     const dogfinderResult = [];
 
     useEffect(() => {
+        const controller = new AbortController();
+
     async function getData() {
 
         try {
             const responseProtect = await axios.get(`https://api.api-ninjas.com/v1/dogs?protectiveness=${preferenceId.protectSearch}`, { headers: {
                     "X-API-KEY": `${process.env.REACT_APP_API_KEY}`,
-                }})
+                }, signal: controller.signal})
             const responseEnergy = await axios.get(`https://api.api-ninjas.com/v1/dogs?energy=${preferenceId.energySearch}`, { headers: {
                     "X-API-KEY": `${process.env.REACT_APP_API_KEY}`,
-                }})
+                }, signal: controller.signal})
             const responseTrain = await axios.get(`https://api.api-ninjas.com/v1/dogs?trainability=${preferenceId.trainSearch}`, { headers: {
                     "X-API-KEY": `${process.env.REACT_APP_API_KEY}`,
-                }})
+                }, signal: controller.signal})
 
             setDogsFetched([].concat(responseProtect.data, responseEnergy.data, responseTrain.data));
             toggleDataFetched(true)
@@ -43,9 +45,14 @@ function DogFinder({preferences}) {
             console.error(error);
         }
     }void getData();
+
+        return function cleanup() {
+            controller.abort();
+        }
+
     }, []);
 
-    dogsFetched.map(x => dogsFetchedUnique.filter(a => a.name == x.name).length > 0 ? null : dogsFetchedUnique.push(x));
+    dogsFetched.map(x => dogsFetchedUnique.filter(a => a.name === x.name).length > 0 ? null : dogsFetchedUnique.push(x));
 
     function filterDogs() {
 
@@ -97,7 +104,7 @@ function DogFinder({preferences}) {
                                     <p>Goed met vreemden: {dog.good_with_strangers}</p>
                                     <p>Vacht verzorging: {dog.grooming}</p>
                                 </div>
-                                <img src={dog.image_link} alt="dog"/>
+                                <img src={dog.image_link} alt={dog.name}/>
                             </div>
                         </article>
                     )

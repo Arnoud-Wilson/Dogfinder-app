@@ -79,7 +79,7 @@ function SignUp() {
                         minLength={6}
                     />
                     <br/>
-                    <button className="standard-button">Registreer</button>
+                    <button className="standard-button" type="submit">Registreer</button>
                 </form>
                 <p className="error-message">{formState.error}</p>
                 <p>Klik <Link to="" className="signin-link">hier</Link> als je je wachtwoord vergeten bent.</p>

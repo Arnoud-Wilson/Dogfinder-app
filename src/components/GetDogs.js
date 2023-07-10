@@ -7,9 +7,11 @@ function GetDogs({page}) {
     const [result, setResult] = useState([]);
 
     useEffect(() => {
+        const controller = new AbortController();
+
         async function getTwentyDogs() {
             try {
-                const response = await axios.get(`https://api.thedogapi.com/v1/breeds?limit=20&page=${page}`)
+                const response = await axios.get(`https://api.thedogapi.com/v1/breeds?limit=20&page=${page}`, {signal: controller.signal})
 
                 setResult(response.data);
             }
@@ -18,6 +20,11 @@ function GetDogs({page}) {
             }
         }
         void getTwentyDogs();
+
+        return function cleanup() {
+            controller.abort();
+        }
+
     }, [page]);
 
     return (

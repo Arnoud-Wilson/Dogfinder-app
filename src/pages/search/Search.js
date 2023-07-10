@@ -29,10 +29,12 @@ function Search() {
                 <button
                     className="standard-button"
                     onClick={()=> navigate("/signup")}
+                    type="button"
                 >Registreer</button>
                 <button
                     className="standard-button"
                     onClick={()=> navigate("/login")}
+                    type="button"
                 >Inloggen</button>
             </article>
             {isAuth === true &&
@@ -84,7 +86,7 @@ function Search() {
                             onChange={(e) => setProtect(e.target.value)}
                         />
                         <br/>
-                        <button className="standard-button">Zoek mijn hond!</button>
+                        <button className="standard-button" type="submit">Zoek mijn hond!</button>
                     </form>
                 </article>
             }

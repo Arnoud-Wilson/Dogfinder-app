@@ -21,7 +21,7 @@ function GetDogImage({imageId}) {
 
     return (
         result !== undefined &&
-        <img src={result.url} alt="dog" />
+        <img src={result.url} alt={result.breeds[0].name} />
     );
 }
 

@@ -97,7 +97,7 @@ function DogFinder({preferences}) {
                                     <p>Goed met vreemden: {dog.good_with_strangers}</p>
                                     <p>Vacht verzorging: {dog.grooming}</p>
                                 </div>
-                                <img src={dog.image_link} alt="dog"/>
+                                <img src={dog.image_link} alt={dog.name}/>
                             </div>
                         </article>
                     )

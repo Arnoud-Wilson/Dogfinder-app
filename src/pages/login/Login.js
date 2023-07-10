@@ -7,6 +7,8 @@ import "./login.css"
 function Login() {
     const {isAuthenticated, setIsAuthenticated, loginFunction } = useContext(AuthContext);
 
+    console.log(isAuthenticated);
+
     function changeHandler(e) {
         e.preventDefault();
         const changedFieldName = e.target.name;
@@ -44,7 +46,7 @@ function Login() {
                 <br/>
                 <button className="standard-button" type="submit">Inloggen</button>
             </form>
-            {/*/!*<p className="error-message">Hier komt eventueel een foutmelding</p>    *!/ Krijg geen bruikbare response terug??*/}
+            <p className="error-message">{isAuthenticated.error}</p>
             <p>Heb je nog geen account? <Link to="/signup" className="signup-link">Registreer</Link> je dan eerst.</p>
         </article>
         </section>

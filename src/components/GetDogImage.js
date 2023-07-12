@@ -6,13 +6,9 @@ function GetDogImage({imageId}) {
     const [result, setResult] = useState();
 
     useEffect(() => {
-        const controller = new AbortController();
-
         async function getImage() {
             try {
-                const response = await axios.get(`https://api.thedogapi.com/v1/images/${imageId}`, {
-                    signal: controller.signal
-                });
+                const response = await axios.get(`https://api.thedogapi.com/v1/images/${imageId}`);
 
                 setResult(response.data);
             }
@@ -21,10 +17,6 @@ function GetDogImage({imageId}) {
             }
         }
         void getImage();
-
-        return function cleanup() {
-            controller.abort();
-        }
 
     }, [imageId]);
 

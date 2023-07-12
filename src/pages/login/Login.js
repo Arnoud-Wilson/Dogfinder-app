@@ -7,8 +7,6 @@ import "./login.css"
 function Login() {
     const {isAuthenticated, setIsAuthenticated, loginFunction } = useContext(AuthContext);
 
-    console.log(isAuthenticated);
-
     function changeHandler(e) {
         e.preventDefault();
         const changedFieldName = e.target.name;

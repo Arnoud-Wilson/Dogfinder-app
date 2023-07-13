@@ -26,6 +26,7 @@ img, picture, video, canvas, svg {
     /*///// Buttons /////*/
     --button-background-color: #030404;
     --button-text-color: #ffffff;
+
     /*///// Tiles /////*/
     --tile-background: rgba(255, 255, 255, 0.6);
 }

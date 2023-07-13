@@ -83,7 +83,11 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Installation
+To learn about nodeJS, check out [NodeJS documentation](https://nodejs.org/en/docs).
+
+To learn about npm, [npm documentation](https://docs.npmjs.com/)
+
+## Installation
 
 1. Get a free API Key at [https://api-ninjas.com.com](https://api-ninjas.com/api/dogs)
 

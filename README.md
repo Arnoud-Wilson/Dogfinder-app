@@ -99,13 +99,19 @@ git clone https://github.com/Arnoud-Wilson/Dogfinder-app.git
 
 3. Download and install nodeJS at [https://nodejs.org/en/download](https://nodejs.org/en/download)
 
-4. Install NPM packages
+4. Download and install latest version of npm 
+
+```sh
+npm install -g npm
+```
+
+5. Install NPM packages
 
 ```sh
 npm install
 ```
 
-5. Enter your API in `.env`
+6. Enter your API in `.env`
 
 ```JS
 REACT_APP_API_KEY = "enter your API key here";

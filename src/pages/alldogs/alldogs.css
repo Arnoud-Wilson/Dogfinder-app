@@ -7,7 +7,6 @@
     4. Areas
         4.1 Dog tile wrappers
         4.2 Individual dog tiles
-        4.2 Dog tile page buttons
     5. Media Queries
 ////////////////////////*/
 
@@ -27,6 +26,24 @@ body {
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 /* --------------- 3.1 Reusables ----------------------- */
+
+.all-dog-button {
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    padding: 4px 16px;
+    border: 1px solid var(--button-background-color);
+    border-radius: 8px;
+    font-family: 'Overpass', sans-serif;
+    margin: 40px 8px 20px 8px;
+}
+
+.all-dog-button:hover {
+    cursor: pointer;
+}
+
+.all-dog-button:disabled {
+    cursor: not-allowed;
+}
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
 
@@ -71,26 +88,6 @@ body {
 .dog-tile img {
     width: 200px;
     max-height: 250px;
-}
-
-/* --------------- 4.2 Dog tile page buttons ------------------- */
-
-.all-dog-button {
-    background-color: #0e1111;
-    color: white;
-    padding: 4px 16px;
-    border: 1px solid #0e1111;
-    border-radius: 8px;
-    font-family: 'Overpass', sans-serif;
-    margin: 40px 8px 20px 8px;
-}
-
-.all-dog-button:hover {
-    cursor: pointer;
-}
-
-.all-dog-button:disabled {
-    cursor: not-allowed;
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */

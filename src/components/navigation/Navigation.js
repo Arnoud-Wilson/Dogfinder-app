@@ -3,6 +3,7 @@ import { slide as Menu } from "react-burger-menu";
 import "./navigation.css";
 import {NavLink, useNavigate } from "react-router-dom";
 import {AuthContext} from "../../context/CustomContextProvider";
+import Button from "../Button";
 
 
 function Navigation() {
@@ -24,10 +25,20 @@ function Navigation() {
             {isAuth ?
                 <>
                     <p className="username">{username}</p>
-                    <button className="navbar-button" type="button" onClick={logoutFunction}>Uitloggen</button>
+                    <Button
+                        className="navbar-button"
+                        type="button"
+                        onClick={logoutFunction}
+                        name="Uitloggen"
+                    />
                 </>
                 :
-                <button className="navbar-button" type="button" onClick={()=> navigate("/login")}>Inloggen</button>
+                <Button
+                    className="navbar-button"
+                    type="button"
+                    onClick={()=> navigate("/login")}
+                    name="Inloggen"
+                />
             }
         </nav>
     );

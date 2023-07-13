@@ -45,8 +45,8 @@
     position: fixed;
     right: 36px;
     top: 6px;
-    background-color: #0e1111;
-    color: white;
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
     padding: 4px 16px;
     border: 1px solid #0e1111;
     border-radius: 8px;

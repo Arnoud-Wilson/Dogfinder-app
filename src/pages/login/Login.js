@@ -2,6 +2,7 @@ import React, {useContext} from "react";
 import { Link } from 'react-router-dom';
 import {AuthContext} from "../../context/CustomContextProvider";
 import "./login.css"
+import Button from "../../components/Button";
 
 
 function Login() {
@@ -42,7 +43,11 @@ function Login() {
                     minLength={6}
                 />
                 <br/>
-                <button className="standard-button" type="submit">Inloggen</button>
+                <Button
+                    className="standard-button"
+                    type="submit"
+                    name="Inloggen"
+                />
             </form>
             <p className="error-message">{isAuthenticated.error}</p>
             <p>Heb je nog geen account? <Link to="/signup" className="signup-link">Registreer</Link> je dan eerst.</p>

@@ -97,13 +97,15 @@ To learn about npm, [npm documentation](https://docs.npmjs.com/)
 git clone https://github.com/Arnoud-Wilson/Dogfinder-app.git
 ```
 
-3. Install NPM packages
+3. Download and install nodeJS at [https://nodejs.org/en/download](https://nodejs.org/en/download)
+
+4. Install NPM packages
 
 ```sh
 npm install
 ```
 
-4. Enter your API in `.env`
+5. Enter your API in `.env`
 
 ```JS
 REACT_APP_API_KEY = "enter your API key here";

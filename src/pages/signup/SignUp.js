@@ -2,6 +2,7 @@ import React, { useState} from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import "./signup.css"
 import axios from "axios";
+import Button from "../../components/Button";
 
 
 function SignUp() {
@@ -79,7 +80,11 @@ function SignUp() {
                         minLength={6}
                     />
                     <br/>
-                    <button className="standard-button" type="submit">Registreer</button>
+                    <Button
+                        className="standard-button"
+                        type="submit"
+                        name="Registreer"
+                    />
                 </form>
                 <p className="error-message">{formState.error}</p>
                 <p>Klik <Link to="" className="signin-link">hier</Link> als je je wachtwoord vergeten bent.</p>

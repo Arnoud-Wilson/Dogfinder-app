@@ -83,7 +83,11 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Installation
+To learn about nodeJS, check out [NodeJS documentation](https://nodejs.org/en/docs).
+
+To learn about npm, [npm documentation](https://docs.npmjs.com/)
+
+## Installation
 
 1. Get a free API Key at [https://api-ninjas.com.com](https://api-ninjas.com/api/dogs)
 
@@ -93,13 +97,21 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 git clone https://github.com/Arnoud-Wilson/Dogfinder-app.git
 ```
 
-3. Install NPM packages
+3. Download and install nodeJS at [https://nodejs.org/en/download](https://nodejs.org/en/download)
+
+4. Download and install latest version of npm 
+
+```sh
+npm install -g npm
+```
+
+5. Install NPM packages
 
 ```sh
 npm install
 ```
 
-4. Enter your API in `.env`
+6. Enter your API in `.env`
 
 ```JS
 REACT_APP_API_KEY = "enter your API key here";

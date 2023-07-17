@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import "./signup.css"
 import axios from "axios";
 import Button from "../../components/Button";
+import Input from "../../components/Input";
 
 
 function SignUp() {
@@ -56,7 +57,7 @@ function SignUp() {
                 <form onSubmit={inputData} >
                     <label htmlFor="email">Email adres:</label>
                     <br/>
-                    <input
+                    <Input
                         type="email"
                         name="email"
                         onChange={changeHandler}
@@ -64,7 +65,7 @@ function SignUp() {
                     <br/>
                     <label htmlFor="username">Gebruikersnaam:</label>
                     <br/>
-                    <input
+                    <Input
                         type="text"
                         name="username"
                         onChange={changeHandler}
@@ -73,7 +74,7 @@ function SignUp() {
                     <br/>
                     <label htmlFor="password">Wachtwoord:</label>
                     <br/>
-                    <input
+                    <Input
                         type="password"
                         name="password"
                         onChange={changeHandler}

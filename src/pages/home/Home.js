@@ -2,6 +2,7 @@ import React from "react";
 import "./home.css";
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
+import Button from "../../components/Button";
 
 
 function Home() {
@@ -18,16 +19,18 @@ function Home() {
                     <br/><br/>
                     Als je je registreert via de "registreer" button onderin, krijg je toegang tot alle faciliteiten die de dogfinder app biedt.
                 </p>
-                <button
+                <Button
                     className="standard-button"
                     onClick={()=> navigate("/signup")}
                     type="button"
-                >Registreer</button>
-                <button
+                    name="Registreer"
+                    />
+                <Button
                     className="standard-button"
                     onClick={()=> navigate("/login")}
                     type="button"
-                >Inloggen</button>
+                    name="Inloggen"
+                    />
             </section>
     );
 }

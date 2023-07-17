@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import "./alldogs.css";
 import GetDogs from "../../components/GetDogs";
+import Button from "../../components/Button";
 
 
 function AllDogs() {
@@ -11,20 +12,20 @@ function AllDogs() {
         <>
             <section className="outer-wrapper">
             <div className="button-wrapper" >
-                <button
+                <Button
                         className="all-dog-button"
                         onClick={() => setPage(page - 1)}
                         disabled = {page <= 0}
                         type="button"
-                        >Vorige
-                        </button>
-                <button
+                        name="Vorige"
+                />
+                <Button
                         className="all-dog-button"
                         onClick= {() => setPage(page + 1)}
                         disabled = {page >= 8}
                         type="button"
-                        >Volgende
-                        </button>
+                        name="Volgende"
+                />
             </div>
             <div className="inner-wrapper">
                 <GetDogs
@@ -32,20 +33,20 @@ function AllDogs() {
                 />
             </div>
                 <div className="button-wrapper" >
-                    <button
+                    <Button
                         className="all-dog-button"
                         onClick={() => setPage(page - 1)}
                         disabled = {page <= 0}
                         type="button"
-                    >Vorige
-                    </button>
-                    <button
+                        name="Vorige"
+                    />
+                    <Button
                         className="all-dog-button"
                         onClick= {() => setPage(page + 1)}
                         disabled = {page >= 8}
                         type="button"
-                    >Volgende
-                    </button>
+                        name="Volgende"
+                    />
                 </div>
             </section>
         </>

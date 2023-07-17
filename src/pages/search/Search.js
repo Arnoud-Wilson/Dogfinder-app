@@ -2,6 +2,7 @@ import React, {useState, useContext} from "react";
 import "./search.css";
 import {useNavigate} from "react-router-dom";
 import {AuthContext} from "../../context/CustomContextProvider";
+import Button from "../../components/Button";
 
 
 function Search() {
@@ -26,16 +27,18 @@ function Search() {
                     <br/>
                     Wil je onze speurhond aan het werk zetten? Vergeet dan niet dat je eerst moet registreren of in moet loggen, daarna krijg je het scherm met sliders te zien waarbij je jouw voorkeuren en wensen kan aangeven zodat wij op zoek kunnen gaan naar de perfecte match! Laat je het ons weten als jij de perfecte match gevonden hebt? Succes.
                 </p>
-                <button
+                <Button
                     className="standard-button"
                     onClick={()=> navigate("/signup")}
                     type="button"
-                >Registreer</button>
-                <button
+                    name="Registreer"
+                />
+                <Button
                     className="standard-button"
                     onClick={()=> navigate("/login")}
                     type="button"
-                >Inloggen</button>
+                    name="Inloggen"
+                />
             </article>
             {isAuth === true &&
                 <article className="dogfinder-form">
@@ -86,7 +89,11 @@ function Search() {
                             onChange={(e) => setProtect(e.target.value)}
                         />
                         <br/>
-                        <button className="standard-button" type="submit">Zoek mijn hond!</button>
+                        <Button
+                            className="standard-button"
+                            type="submit"
+                            name="Zoek mijn hond!"
+                        />
                     </form>
                 </article>
             }

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import {AuthContext} from "../../context/CustomContextProvider";
 import "./login.css"
 import Button from "../../components/Button";
+import Input from "../../components/Input";
 
 
 function Login() {
@@ -27,20 +28,20 @@ function Login() {
             <form onSubmit={loginFunction} >
                 <label htmlFor="username">Gebruikersnaam:</label>
                 <br/>
-                <input
+                <Input
                     type="text"
                     name="username"
                     onChange={changeHandler}
-                    minLength={6}
+                    minLength="6"
                 />
                 <br/>
                 <label htmlFor="password">Wachtwoord:</label>
                 <br/>
-                <input
+                <Input
                     type="password"
                     name="password"
                     onChange={changeHandler}
-                    minLength={6}
+                    minLength="6"
                 />
                 <br/>
                 <Button
